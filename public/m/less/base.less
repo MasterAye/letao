@@ -1,0 +1,62 @@
+
+@main-color: #006699;
+
+//头部区域
+#header{
+    top: 0;
+    left: 0;
+    height: 45px;
+    background-color: @main-color;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    z-index: 999;
+    .icon_search{
+        color: #fff;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+    }
+}
+
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: @main-color;
+    z-index: 999;
+    >div{
+        >div{
+            font-size: 14px;
+            text-align: center;
+            padding: 11px 0;
+            >a{
+                font-size: 14px;
+                color: #fff;
+                &::before{
+                    display:block;
+                    margin-bottom: 3px;
+                }
+                &.active{
+                    color: orange;
+                }
+            }
+            >span{
+            }
+        }
+    }
+}
+html,body{
+    height: 100%;
+}
+#main{
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    height: 100%;
+};
