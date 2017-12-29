@@ -1,6 +1,21 @@
 
 @main-color: #006699;
 
+*{
+    padding: 0;
+    margin: 0;
+}
+img {
+    /* 解决图片3px的间隙 */
+    vertical-align: middle;
+}
+li{
+    /* 去掉小圆点 */
+    list-style: none;
+}
+a{
+    color: #666;
+}
 //头部区域
 #header{
     top: 0;
@@ -10,7 +25,7 @@
     width: 100%;
     position: fixed;
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     color: #fff;
     z-index: 999;
     .icon_search{
@@ -18,6 +33,33 @@
         position: absolute;
         top: 17px;
         right: 20px;
+    }
+    .icon_back{
+        position: absolute;
+        left: 14px;
+        top: 15px;
+        color: #fff;
+    }
+    >form{
+        padding:0 40px 0 40px;
+
+        margin: 0;
+        height: 45px;
+
+
+        >input{
+            width: 100%;
+            background-color: #fff;
+            height: 30px;
+            padding-top: 0;
+            margin-top: 7px;
+            font-size: 14px;
+            text-align: left;
+            color:#000;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+        }
     }
 }
 
@@ -55,6 +97,8 @@ html,body{
     height: 100%;
 }
 #main{
+    //padding-top: 45px;
+    //padding-bottom: 50px;
     padding-top: 45px;
     padding-bottom: 50px;
     background-color: #fff;

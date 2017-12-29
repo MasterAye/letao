@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>search搜索</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!--4. 引入字体图标文件-->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!--5.引入主页的less文件 -->
+    <link rel="stylesheet/less" href="less/search.less">
+    <!--6. 引入less 编译文件-->
+    <script src="lib/less/less.js"></script>
+
+</head>
+<body>
+<!--头部区域-->
+<header id="header">
+    <a href="index.html" class="icon_back fa fa-arrow-left"></a>
+    <span>搜索中心</span>
+</header>
+
+<main id="main">
+    <div class="search-form">
+        <input type="search" placeholder="搜索你喜欢的商品" class="search-input">
+        <button type="button" class="btn-search mui-btn mui-btn-primary">搜索</button>
+    </div>
+    <div class="search-history">
+        <div class="search-history-heading mui-clear">
+            <span>搜索历史</span>
+            <span class="icon_clear btn-clear fa fa-trash">清空记录</span>
+        </div>
+        <div class="search-history-list">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a href="#">鞋子</a>
+                    <i class="icon_delete fa fa-close"></i>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a href="#">内衣</a>
+                    <i class="icon_delete fa fa-close"></i>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a href="#">裤子</a>
+                    <i class="icon_delete fa fa-close"></i>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</main>
+
+
+<!--底部区域-->
+<footer id="footer">
+    <div class="mui-row">
+        <div class="mui-col-xs-3">
+            <a href="index.html" class="fa fa-home active">
+                <span>首页</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="category.html" class="fa fa-bars">
+                <span>分类</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="#" class="fa fa-shopping-cart">
+                <span>购物车</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="#" class="fa fa-user">
+                <span>会员中心</span>
+            </a>
+        </div>
+    </div>
+</footer>
+<script id="getHistoryTmp" type="text/html">
+
+    {{each rows as value i}}
+        <li class="mui-table-view-cell">
+            <a href="#" data-history="{{value}}">
+                {{value}}
+                <i class="icon_delete fa fa-close btn-delete"></i>
+            </a>
+        </li>
+    {{/each}}
+
+</script>
+
+<!--7. 引入zepto的js文件, 操作DOM和ajax请求-->
+<script src="lib/zepto/zepto.min.js"></script>
+<!--8. 引入 MUI 的js文件-->
+<script src="lib/mui/js/mui.js"></script>
+<!--9. 引入模板引擎的js 文件 -->
+<script src="lib/artTemplate/template.js"></script>
+<!--10. 引入主页的js 文件-->
+<script src="js/search.js"></script>
+
+</body>
+</html>

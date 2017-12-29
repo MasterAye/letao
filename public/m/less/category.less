@@ -1,0 +1,59 @@
+@import 'base.less';
+
+//主体部分
+#main {
+    background-color: #eee;
+    .category-left {
+        float: left;
+        > ul {
+            > li {
+                > a {
+                    background-color: #fff;
+                    width: 80px;
+                    text-align: center;
+                    height: 40px;
+                    display: block;
+
+                    border-right: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
+                    font-size: 14px;
+                    line-height: 40px;
+                }
+                &.active{
+                    >a{
+                        background-color: #ccc;
+
+                    }
+                }
+            }
+        }
+    }
+    .category-right {
+        padding: 10px;
+        margin-left: 80px;
+        width: auto;
+        top: 45px;
+        bottom: 50px;
+        overflow: hidden;
+        .mui-scroll{
+            position: relative;
+            .mui-row{
+                background-color: #fff;
+                >div{
+                    >a{
+                        text-align: center;
+                        display: block;
+                        >img{
+                            width: 100%;
+                        }
+                        >p{
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

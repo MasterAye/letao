@@ -12,7 +12,7 @@ window.addEventListener('load',function(){
         scrollX: false, //是否横向滚动
         startX: 0, //初始化时滚动至x
         startY: 0, //初始化时滚动至y
-        indicators: true, //是否显示滚动条
+        indicators: false, //是否显示滚动条
         bounce: true //是否启用回弹
     });
 
