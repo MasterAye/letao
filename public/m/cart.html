@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cart购物车</title>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet/less" href="less/cart.less">
+    <script src="lib/less/less.js"></script>
+
+
+</head>
+<body>
+<!--头部区域-->
+<header id="header">
+    <a href="javascript:history.back();" class="icon_back fa fa-arrow-left"></a>
+    <span>我的购物车</span>
+</header>
+
+<!--登录主体-->
+<main id="main">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-transitioning mui-selected">
+            <div class="mui-slider-right mui-disabled mui-selected">
+                <a class="mui-btn mui-btn-blue">
+                    编辑
+                </a>
+                <a class="mui-btn mui-btn-red">
+                    删除
+                </a>
+            </div>
+            <div class="mui-slider-handle mui-navigate-right">
+                <div class="mui-table-cell">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                            </div>
+                            <div class="product-price">
+                                <strong>￥112</strong>
+                                <del>￥888</del>
+                            </div>
+                            <div class="product-num">
+                                x3双
+                            </div>
+                            <div class="product-size">
+                                鞋码：40
+                            </div>
+                            <div class="product-check">
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="mui-table-view-cell mui-transitioning mui-selected">
+            <div class="mui-slider-right mui-disabled mui-selected">
+                <a class="mui-btn mui-btn-blue">
+                    编辑
+                </a>
+                <a class="mui-btn mui-btn-red">
+                    删除
+                </a>
+            </div>
+            <div class="mui-slider-handle mui-navigate-right">
+                <div class="mui-table-cell">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                            </div>
+                            <div class="product-price">
+                                <strong>￥112</strong>
+                                <del>￥888</del>
+                            </div>
+                            <div class="product-num">
+                                x3双
+                            </div>
+                            <div class="product-size">
+                                鞋码：40
+                            </div>
+                            <div class="product-check">
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="mui-table-view-cell mui-transitioning mui-selected">
+            <div class="mui-slider-right mui-disabled mui-selected">
+                <a class="mui-btn mui-btn-blue">
+                    编辑
+                </a>
+                <a class="mui-btn mui-btn-red">
+                    删除
+                </a>
+            </div>
+            <div class="mui-slider-handle mui-navigate-right">
+                <div class="mui-table-cell">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                            </div>
+                            <div class="product-price">
+                                <strong>￥112</strong>
+                                <del>￥888</del>
+                            </div>
+                            <div class="product-num">
+                                x3双
+                            </div>
+                            <div class="product-size">
+                                鞋码：40
+                            </div>
+                            <div class="product-check">
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+
+</main>
+
+<!--订单-->
+<div id="order">
+    <div class="order-count">
+        订单总额: $<span class="order-price">9999</span>
+    </div>
+    <button class="mui-btn mui-btn-danger">提交订单</button>
+</div>
+
+
+<!--底部区域-->
+<footer id="footer">
+    <div class="mui-row">
+        <div class="mui-col-xs-3">
+            <a href="index.html" class="fa fa-home active">
+                <span>首页</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="category.html" class="fa fa-bars">
+                <span>分类</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="cart.html" class="fa fa-shopping-cart">
+                <span>购物车</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="user.html" class="fa fa-user">
+                <span>会员中心</span>
+            </a>
+        </div>
+    </div>
+</footer>
+<!--//购物车渲染模板-->
+<script id="cartTmp" type="text/html">
+    {{each rows as value i}}
+    <li class="mui-table-view-cell mui-transitioning mui-selected">
+        <div class="mui-slider-right mui-disabled mui-selected">
+            <a class="mui-btn mui-btn-blue btn-edit" data-id="{{value.id}}" data-product-size="{{value.productSize}}"
+               data-product-num="{{value.productNum}}" data-now-size="{{value.size}}" data-now-num="{{value.num}}">
+                编辑
+            </a>
+            <a class="mui-btn mui-btn-red btn-delete" data-id="{{value.id}}">
+                删除
+            </a>
+        </div>
+        <div class="mui-slider-handle mui-navigate-right">
+            <div class="mui-table-cell">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="{{value.pic[0].picAddr}}">
+                    <div class="mui-media-body">
+                        <div class="product-name">
+                            {{value.proName}}
+                        </div>
+                        <div class="product-price">
+                            <strong class="price" data-price="{{value.price}}">￥{{value.price}}</strong>
+                            <del>￥{{value.oldPrice}}</del>
+                        </div>
+                        <div class="product-num">
+                            x <span class="num" data-num="{{value.num}}">{{value.num}}</span> 双
+                        </div>
+                        <div class="product-size">
+                            鞋码：{{value.size}}
+                        </div>
+                        <div class="product-check">
+                            <input type="checkbox" checked="checked">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!--编辑模板-->
+<script id="editCartTmp" type="text/html">
+
+    <div class="product-size">
+        尺码： {{each productSize as value i}}
+        {{if nowSize == value}}
+        <span class="btn-size active" >{{value}}</span>
+        {{else}}
+        <span class="btn-size" >{{value}}</span>
+        {{/if}}
+        {{/each}}
+    </div>
+    <div class="product-num">
+        数量：
+        <div class="product-num-options">
+            <a href="#" class="btn-reduce">-</a>
+            <input type="number" class="count" value="{{nowNum}}" disabled="true">
+            <a href="#" class="btn-add">+</a>
+        </div>
+        剩余： <span class="residue-num">{{productNum}}</span>件
+    </div>
+
+</script>
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>

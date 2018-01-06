@@ -18,13 +18,14 @@ $(function(){
 function getCategoryLeftTmp(){
     $.ajax({
         url:'/category/queryTopCategory',
+
         success:function(backData){
             // console.log(backData);
             var html = template('categoryLeftTmp',backData);
             $('.category-left ul').html(html);
             $('.category-left ul li:eq(0)').addClass('active');
         }
-    })
+    });
 }
 function categoryLeftClick(){
     $('.category-left').on('click',function(e){
@@ -32,12 +33,20 @@ function categoryLeftClick(){
         var idData = $(e.target).parent().data('id');
         console.log($(e.target).parent().data('id'));
         getCategoryRightData(idData);
-    })
+    });
 }
 function getCategoryRightData(id) {
     $.ajax({
         url: '/category/querySecondCategory',
         data: { 'id': id },
+        beforeSend:function (data) {
+            $('.loadEffect').show();
+        },
+        complete:function () {
+            setTimeout(function () {
+                $('.loadEffect').hide();
+            },1000);
+        },
         success: function(data) {
             console.log(data);
             var html = template('categoryRightTmp', data);
@@ -48,7 +57,7 @@ function getCategoryRightData(id) {
                 $('.category-right .mui-scroll').html('<p>没有数据</p>')
             }
         }
-    })
+    });
 }
 
 

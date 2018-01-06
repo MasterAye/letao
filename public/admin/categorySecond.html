@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>second二级分类</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/index.less">
+    <script src="lib/less/less.js"></script>
+
+</head>
+<body>
+<!--左侧导航-->
+<aside id="nav">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <img src="images/my_logo.jpg" alt="" class="img-circle">
+            <p>刘德华</p>
+        </li>
+        <li class="list-group-item"><a href="#"><i class="fa-user"></i>用户管理</a></li>
+        <li class="list-group-item">
+            <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+               aria-controls="collapseExample">
+                <i class="fa-bars"></i>分类管理</a>
+            <div class="collapse in" id="collapseExample">
+                <div class="well">
+                    <a href="categoryFirst.html">一级分类</a>
+                    <a href="categorySecond.html">二级分类</a>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item"><a href="product.html"><i class="fa-product-hunt"></i>商品管理</a></li>
+    </ul>
+</aside>
+<!--右侧主体-->
+<main id="main">
+    <header class="header">
+        <a href="#" class="pull-left fa-navicon"></a>
+        <a href="#" class="fa fa-sign-out pull-right">退出</a>
+    </header>
+    <section class="main-body">
+
+    </section>
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn-add" data-dismiss="modal">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--//二级分类模板-->
+<script id="addCategorySecondTmp" type="text/html">
+    选择分类:
+    <select id="categoryFirst">
+        {{each rows as value i}}
+        <option value="{{value.id}}">{{value.categoryName}}</option>
+        {{/each}}
+    </select> <br>
+    品牌名称:<input type="text" class="form-control category-second">
+    品牌图片:<input type="file" class="brand-logo">
+</script>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<script id="categorySecondTmp" type="text/html">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg btn-add1" data-toggle="modal" data-target="#myModal">
+        添加二级分类
+    </button>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>操作</th>
+            <th>品牌编号</th>
+            <th>品牌名称</th>
+            <th>品牌logo</th>
+            <th>所属分类</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{each rows as value i}}
+        <tr>
+            <th scope="row">
+                <input type="checkbox">
+            </th>
+            <td>{{value.id}}</td>
+            <td>{{value.brandName}}</td>
+            <td>
+                <img src="{{value.brandLogo}}" alt="">
+            </td>
+            <td>
+                {{value.categoryName}}
+            </td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/categorySecond.js"></script>
+</body>
+</html>

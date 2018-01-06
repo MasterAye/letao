@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user个人中心</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet/less" href="less/user.less">
+    <script src="lib/less/less.js"></script>
+
+
+</head>
+<body>
+<!--头部区域-->
+<header id="header">
+    <a href="index.html" class="icon_back fa fa-arrow-left"></a>
+    <span>个人中心页</span>
+</header>
+
+<!--登录主体-->
+<main id="main">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                <div class="mui-media-body">
+                    <div class="username">用户名</div>
+                    <p class='mui-ellipsis'>
+                        绑定手机: <span class="mobile">123123123123</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                账号与安全
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                我的购物车
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                收货地址管理
+            </a>
+        </li>
+    </ul>
+
+    <!--推出登录-->
+    <div class="exit">
+        <a href="#" class="mui-btn btn-exit">退出登录</a>
+    </div>
+</main>
+
+
+<!--底部区域-->
+<footer id="footer">
+    <div class="mui-row">
+        <div class="mui-col-xs-3">
+            <a href="index.html" class="fa fa-home active">
+                <span>首页</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="category.html" class="fa fa-bars">
+                <span>分类</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="cart.html" class="fa fa-shopping-cart">
+                <span>购物车</span>
+            </a>
+        </div>
+        <div class="mui-col-xs-3">
+            <a href="user.html" class="fa fa-user">
+                <span>会员中心</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/user.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+
+@import 'base.less';
+
+#main{
+    #pullrefresh{
+        height: 100%;
+        position: relative;
+    }
+    .product-orderBar{
+        .mui-row{
+            >div{
+                >a{
+                    text-align: center;
+                    display: block;
+                    font-size: 0.375rem;
+                    line-height: 0.9375rem;
+                    background-color: #efeff4;
+                    >i{
+                        font-size: 0.4375rem;
+                    }
+                }
+                &.active{
+                    >a{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+    .product-content{
+        .mui-row{
+            >div{
+                padding: 0 0.15625rem;
+                .product{
+                    box-shadow: 0 0 0.15625rem #ccc;
+                    text-align: center;
+                    padding-bottom: 0.3125rem;
+                    margin-top: 0.3125rem;
+                    >a{
+                        display: block;
+                        >img{
+                            width: 100%;
+                        }
+                    }
+                    >div{
+                        font-size: 0.4375rem;
+                        height: 0.875rem;
+                        line-height: 0.4375rem;
+                        /* 只显示2行文字超出的隐藏 */
+                        overflow: hidden;
+                    }
+                    >div{
+                        font-size: 0.375rem;
+                        >span{
+                            color: #f40;
+                        }
+                        >del{
+                            color: #ccc;
+                        }
+                    }
+                    >button{
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

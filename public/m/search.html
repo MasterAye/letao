@@ -84,7 +84,7 @@
 
     {{each rows as value i}}
         <li class="mui-table-view-cell">
-            <a href="#" data-history="{{value}}">
+            <a href="productlist.html?search={{value}}" data-history="{{value}}">
                 {{value}}
                 <i class="icon_delete fa fa-close btn-delete"></i>
             </a>
@@ -101,6 +101,7 @@
 <script src="lib/artTemplate/template.js"></script>
 <!--10. 引入主页的js 文件-->
 <script src="js/search.js"></script>
+<script src="js/base.js"></script>
 
 </body>
 </html>

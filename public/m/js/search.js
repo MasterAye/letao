@@ -30,8 +30,10 @@ function addHistory(){
             historyData.push(search);
             localStorage.setItem('historyData',JSON.stringify(historyData));
 
-            queryHistory()
+            queryHistory();
         }
+        $('.search-input').val('');
+        window.location.href="productlist.html?search="+search;
     });
 }
 
@@ -42,6 +44,9 @@ function queryHistory() {
     }else {
         historyData = [];
     }
+    // 如果要反转 就调用数组反转方法
+    historyData = historyData.reverse();
+
     var html = template('getHistoryTmp', {'rows': historyData});
     $('.mui-table-view').html(html);
 }
@@ -58,17 +63,17 @@ function deleteHistory(){
             historyData = [];
         }
         var historyIndex = historyData.indexOf(history + "");
-        historyData.splice(historyIndex,1)
+        historyData.splice(historyIndex,1);
 
         localStorage.setItem('historyData',JSON.stringify(historyData));
         queryHistory();
-    })
+    });
 }
 function clearHistory() {
     $('.btn-clear').on('click',function(){
         localStorage.setItem('historyData','');
         queryHistory();
-    })
+    });
 
 }
 
